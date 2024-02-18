@@ -1,34 +1,45 @@
-import os
+import os     #Chamando algum comando da biblioteca.
 
 
-
-print("""
+def exibir_nome_do_programa():
+    print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
 ╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
 ░╚═══██╗██╔══██║██╔══██╗██║░░██║██╔══██╗  ██╔══╝░░░██╔██╗░██╔═══╝░██╔══██╗██╔══╝░░░╚═══██╗░╚═══██╗
 ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░
-      """)                              #(""" """): Pular várias linhas.
+""")                              #(""" """): Pular várias linhas.
 
-print('1.Cadastrar restaurante')     #Print: exibir informação.
-print('2.Listar restaurantes')
-print('3.Ativar restaurante')
-print('4.Sair\n')
-
-opcao_escolhida = int(input('Escolha uma opção: '))    #INPUT: puxar informação do usuário.  #INT: transformar o resultado de string para número inteiro.
+def exibir_opcoes():
+    print('1.Cadastrar restaurante')     #Print: exibir informação.
+    print('2.Listar restaurantes')
+    print('3.Ativar restaurante')
+    print('4.Sair\n')
 
 def finalizar_app():                                          #DEF: função
-     os.system('cls')                         #Limpando a tela quando cair na opção 4.
-     print('Finalizando o app\n')           #\n: pulando linha.
+    os.system('cls')                         #Limpando a tela quando cair na opção 4.
+    print('Finalizando o app\n')           #\n: pulando linha.
 
-if opcao_escolhida == 1 :        # == COMPARAÇÃO.
-    print ('Cadastrar restaurante')
-elif opcao_escolhida == 2 :           # ELIF : else.
-    print ('Listar restaurante')
-elif opcao_escolhida == 3 :
-     print ('Ativar restaurante')        
-else:          
-    finalizar_app()
+def escolher_opcao():
+    opcao_escolhida = int(input('Escolha uma opção: '))    #INPUT: puxar informação do usuário.  #INT: transformar o resultado de string para número inteiro.
+
+
+    if opcao_escolhida == 1 :        # == COMPARAÇÃO.
+        print ('Cadastrar restaurante')
+    elif opcao_escolhida == 2 :           # ELIF : else.
+        print ('Listar restaurante')
+    elif opcao_escolhida == 3 :
+        print ('Ativar restaurante')        
+    else:          
+        finalizar_app()
+
+def main():
+    exibir_nome_do_programa()
+    exibir_opcoes()
+    escolher_opcao()
+
+if __name__ == '__main__':     #Nós não queremos que ele seja importado por outros arquivos
+    main()
 
 

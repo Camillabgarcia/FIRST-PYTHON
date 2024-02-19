@@ -1,5 +1,6 @@
 import os     #Chamando algum comando da biblioteca.
 
+restaurantes = []
 
 def exibir_nome_do_programa():
     print("""
@@ -26,12 +27,21 @@ def opcao_invalida():
     input('Digite uma tecla para voltar ao menu principal')
     main()
 
+def cadastrar_novo_restaurante():
+    os.system('cls')
+    print('Cadastro de novos restaurantes\n')
+    nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
+    restaurantes.append(nome_do_restaurante)                         #colocar o nome dentro da lista   
+    print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
+    input('Digite uma tecla para voltar ao menu inicial.')
+    main()          
+
 def escolher_opcao():
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))    #INPUT: puxar informação do usuário.  #INT: transformar o resultado de string para número inteiro.
 
         if opcao_escolhida == 1 :        # == COMPARAÇÃO.
-            print ('Cadastrar restaurante')
+            cadastrar_novo_restaurante()
         elif opcao_escolhida == 2 :           # ELIF : else.
             print ('Listar restaurante')
         elif opcao_escolhida == 3 :

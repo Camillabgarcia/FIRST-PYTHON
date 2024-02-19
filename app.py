@@ -39,7 +39,6 @@ def main():
     exibir_opcoes()
     escolher_opcao()
 
-if __name__ == '__main__':     #Nós não queremos que ele seja importado por outros arquivos
+if __name__ == '__main__':     #Nós não queremos que ele seja importado por outros arquivos.
     main()
-
-
+    

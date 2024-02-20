@@ -1,4 +1,5 @@
-Curso de Python Aplicado no Back-end
+Curso de Python Aplicado no Back-end:
+
 Este repositório contém os projetos e códigos desenvolvidos durante meu primeiro curso de Python aplicado no back-end. Durante a formação, exploramos os fundamentos da linguagem Python e aplicamos esses conhecimentos para desenvolver um projeto prático inspirado no mundo real.
 
 Sobre o Curso
